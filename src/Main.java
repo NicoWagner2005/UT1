@@ -1,5 +1,6 @@
 import TA2.UtilMath;
 import TA3.ContadorPalabras;
+import TA3.ResultadoDoble;
 
 public class Main {
 
@@ -9,6 +10,8 @@ public class Main {
         System.out.println(UtilMath.sumaPrimoONo(10));
 
         System.out.println(ContadorPalabras.contarPalabras("hola como estas a"));
+        ResultadoDoble resultado = ContadorPalabras.cantidadConsVoc("hola como estas a");
+        resultado.print();
     }
 
 }
