@@ -11,7 +11,8 @@ public class Main {
 
         System.out.println(ContadorPalabras.contarPalabras("hola como estas a"));
         ResultadoDoble resultado = ContadorPalabras.cantidadConsVoc("buenas tardes");
-        System.out.println(resultado.MostrarResultado());
+        System.out.println(resultado.MostrarResultado());        
+        System.out.println(ContadorPalabras.contarPalabrasGrupoB("hola como   ahhhhhhhhhh v", 3));
     }
 
 }
