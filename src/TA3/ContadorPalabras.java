@@ -28,19 +28,21 @@ public class ContadorPalabras {
         } else {
             boolean esPalabra = false;
             int contador = 0;
+            int largo = 0;
+
             for (int i = 0; i < frase.length(); i++) {
-                int largo = 0;
-                while ((i < frase.length())) {
+                while ((i < frase.length()) && largo < x) {
 
                     if (Character.isLetter(frase.charAt(i)))
                         largo += 1;
 
-                    if ((frase.charAt(i) == ' ') && (largo >= x)) {
-                        esPalabra = true;
-                        contador += 1;
-
-                    }
                     i += 1;
+
+                }
+                if ((frase.charAt(i) == ' ') && (largo >= x)) {
+                    esPalabra = true;
+                    contador += 1;
+                    largo = 0;
 
                 }
             }

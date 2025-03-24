@@ -8,7 +8,7 @@ public class Main {
         // System.out.println(UtilMath.factorial(4));
         // System.out.println(UtilMath.sumaPrimoONo(10));
 
-        System.out.println(ContadorPalabras.contarPalabrasB("HOLA COMO ESTAS lololololololo", 10));
+        System.out.println(ContadorPalabras.contarPalabrasB("HOLA COMO ESTAS", 5));
     }
 
 }
