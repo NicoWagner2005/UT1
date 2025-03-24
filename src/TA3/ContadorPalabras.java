@@ -1,6 +1,8 @@
 package TA3;
 
 
+import java.io.*;
+import java.util.ArrayList;
 
 public class ContadorPalabras {
 
@@ -72,6 +74,32 @@ public class ContadorPalabras {
         }
         return contador;
     }
+
+    public static ArrayList<String> leerArchivo(String filePath){
+        ArrayList<String> lineasLeidas = new ArrayList<String>();
+        FileReader fr;
+        try {
+            fr = new FileReader(filePath);
+            BufferedReader br = new BufferedReader(fr);
+            String lineaActual = br.readLine();
+            while (lineaActual != null){
+                lineasLeidas.add(lineaActual);
+                lineaActual = br.readLine();
+            }
+        }
+        catch (FileNotFoundException e) {
+            System.out.println("Error al leer el archivo "+filePath);
+            e.printStackTrace();
+        } catch (IOException e)
+        {
+            System.out.println("Error al leer el archivo "+filePath);
+            e.printStackTrace();
+        }
+        System.out.println("Archivo leido satisfactoriamente");
+
+        return lineasLeidas;
+    }
+
 }
 
 
