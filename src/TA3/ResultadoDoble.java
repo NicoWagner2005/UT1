@@ -2,13 +2,23 @@ package TA3;
 
 public class ResultadoDoble {
 
-    int[] resultado = new int[2];
+    private final int vocales;
+    private final int consonantes;
 
-    public ResultadoDoble(int[] resultado){
-        this.resultado = resultado;
+    public int getVocales(){
+        return this.vocales;
     }
 
-    public void print(){
-        System.out.println(resultado[0] + "," + resultado[1]);
+    public int getConsonantes(){
+        return this.consonantes;
+    }
+
+    public ResultadoDoble(int vocales, int consonantes){
+        this.vocales = vocales;
+        this.consonantes = consonantes;
+    }
+
+    public String MostrarResultado (){
+        return (getVocales() + "," + getConsonantes());
     }
 }

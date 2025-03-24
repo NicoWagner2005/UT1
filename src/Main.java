@@ -10,8 +10,8 @@ public class Main {
         System.out.println(UtilMath.sumaPrimoONo(10));
 
         System.out.println(ContadorPalabras.contarPalabras("hola como estas a"));
-        ResultadoDoble resultado = ContadorPalabras.cantidadConsVoc("hola como estas a");
-        resultado.print();
+        ResultadoDoble resultado = ContadorPalabras.cantidadConsVoc("buenas tardes");
+        System.out.println(resultado.MostrarResultado());
     }
 
 }
