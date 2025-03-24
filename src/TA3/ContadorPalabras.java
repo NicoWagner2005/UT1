@@ -48,7 +48,30 @@ public class ContadorPalabras {
         }
         return new ResultadoDoble(cantVoc, cantCons);
     }
+    public static int contarPalabrasGrupoB(String frase, int largo) {
 
+        int contador = 0;
+        int contLonguitud = 0;
+        boolean esPalabra = false;
+        for (int i = 0; i < frase.length(); i++) {
+            if (Character.isLetter(frase.charAt(i))) {
+                contLonguitud++;
+                if (contLonguitud >= largo) {
+                    esPalabra = true;
+                }
+            } else if ((frase.charAt(i) == ' ')) {
+                if (esPalabra) {
+                    contador += 1;
+                }
+                esPalabra = false;
+                contLonguitud = 0;
+            }
+        }
+        if (esPalabra) {
+            contador += 1;
+        }
+        return contador;
+    }
 }
 
 
