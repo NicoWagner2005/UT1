@@ -5,10 +5,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println(UtilMath.factorial(4));
-        System.out.println(UtilMath.sumaPrimoONo(10));
+        // System.out.println(UtilMath.factorial(4));
+        // System.out.println(UtilMath.sumaPrimoONo(10));
 
-        System.out.println(ContadorPalabras.contarPalabras("hola como estas a"));
+        System.out.println(ContadorPalabras.contarPalabrasB("HOLA COMO ESTAS lololololololo", 10));
     }
 
 }
