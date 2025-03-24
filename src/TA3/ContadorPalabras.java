@@ -12,12 +12,15 @@ public class ContadorPalabras {
             if (Character.isLetter(frase.charAt(i))){
                 esPalabra = true;
             }
-            if (frase.charAt(i) == ' ' || i == frase.length() - 1){
+            else if ((frase.charAt(i) == ' ')){
                 if (esPalabra){
                     contador += 1;
                 }
                 esPalabra = false;
             }
+        }
+        if (esPalabra){
+            contador += 1;
         }
         return contador;
     }
